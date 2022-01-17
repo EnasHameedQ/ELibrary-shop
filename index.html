@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="assests/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assests/css/slider_style.css" />
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css" /> -->
     <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,15 +34,29 @@
         <!-- start menu -->
         <div class="nav-links">
             <ul class="all_list">
-                <li class=" list login"> <i class="fa fa-codepen "></i><a href="#Home" target="_self">ادخل لحسابك او سجل الان </a></li>
+                <li class=" list login">
+                    <a href="pages/login.html" target="_self"><img src="assests/img/logos/humen.svg" alt="Avatar ">ادخل لحسابك او سجل الان </a>
+                </li>
 
-                <li class="list"> <i class="fa fa-codepen "></i><a href="#About" target="_self">الرئيسية</a></li>
-                <li class="list"> <i class="fa fa-codepen "></i> <a href="#Works" target="_self">من نحن </a></li>
-                <li class="list"> <i class="fa fa-codepen "></i><a href="#ser" target="_self">اتصل بنا</a></li>
-                <li class="list dropdown"> <i class="fa fa-codepen "></i><a href="#call" target="_self">المساعدة </a></li>
-                <li class="list"> <i class="fa fa-codepen "></i><a href="#call" target="_self">سياسة الخصوصية </a></li>
-                <li class="list"> <i class="fa fa-codepen "></i><a href="#call" target="_self"> YER          اليمن</a></li>
-                <li class=" list reverse"><a href="#call" target="_self">English  <i class="fa fa-codepen "></i></a></li>
+                <li class="list">
+                    <a href="#" target="_self"> <img src="assests/img/logos/star.svg" alt="Avatar ">الرئيسية</a>
+                </li>
+                <li class="list">
+                    <a href="#About" target="_self"><img src="assests/img/logos/star.svg" alt="Avatar "> من نحن </a>
+                </li>
+                <li class="list">
+                    <a href="#call" target="_self"> <img src="assests/img/logos/call.svg" alt="Avatar ">اتصل بنا</a>
+                </li>
+                <li class="list dropdown">
+                    <a href="#help" target="_self"> <img src="assests/img/logos/help.svg" alt="Avatar ">المساعدة </a>
+                </li>
+                <li class="list">
+                    <a href="#security" target="_self"> <img src="assests/img/logos/security.svg" alt="Avatar ">سياسة الخصوصية </a>
+                </li>
+                <li class="list">
+                    <a href="#yemen" target="_self"><img src="assests/img/logos/ye.svg" alt="Avatar "> YER اليمن</a>
+                </li>
+                <li class=" list english"><a href="#translate" target="_self">English   <img src="assests/img/logos/translate.svg" alt="Avatar "></a></li>
             </ul>
         </div>
 
@@ -51,8 +66,7 @@
     <!-- end nav -->
     <!-- start header -->
     <header>
-
-        <img src="assests/img/logos/5.png" alt="logo" />
+        <img src="assests/img/catigory/step2.png" alt="logo" />
         <div class="search-container">
             <form action="/action_page.php">
                 <div class="input-icons">
@@ -64,10 +78,70 @@
         </div>
         <a href="#call" target="_self"> <i class="fa fa-cart-plus" aria-hidden="true"></i>
         </a>
+        <div class="second_nav">
+
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+
 
     </header>
     <!-- end header -->
-    <section class=" catigories ">
+    <!-- start slider -->
+    <section class="SlideShow">
+        <div class="CSSgal">
+
+            <!-- Don't wrap targets in parent -->
+            <s id="s1"></s>
+            <s id="s2"></s>
+            <s id="s3"></s>
+            <s id="s4"></s>
+
+            <div class="slider">
+                <div style="background-color: blanchedalmond;">
+                    <h2>Slide 2</h2> <img src="assests/img/logos/call.svg" alt="Avatar "> </div>
+                <div style="background-color: rgb(205, 255, 205);">
+                    <h2>Slide 2</h2> <img src="assests/img/logos/truck.svg" alt="Avatar ">
+                </div>
+                <div style="background-color: rgb(103, 156, 224);">
+                    <h2>Slide 2</h2> <img src="assests/img/logos/sudi.svg" alt="Avatar ">
+                </div>
+                <div style="background-color: rgb(255, 205, 255);">
+                    <h2>Slide 2</h2> <img src="assests/img/logos/star.svg" alt="Avatar ">
+                </div>
+            </div>
+
+            <div class="prevNext">
+                <div>
+                    <a href="#s4"></a>
+                    <a href="#s2"></a>
+                </div>
+                <div>
+                    <a href="#s1"></a>
+                    <a href="#s3"></a>
+                </div>
+                <div>
+                    <a href="#s2"></a>
+                    <a href="#s4"></a>
+                </div>
+                <div>
+                    <a href="#s3"></a>
+                    <a href="#s1"></a>
+                </div>
+            </div>
+
+            <div class="bullets">
+                <a href="#s1">1</a>
+                <a href="#s2">2</a>
+                <a href="#s3">3</a>
+                <a href="#s4">4</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- end container slider -->
+    <!-- <section class=" catigories ">
         <h2>
             Mens Bascketball Shose
         </h2>
@@ -93,7 +167,7 @@
             </div>
             <div class="catigory ">
 
-                <img src="assets/img/catigory/ " alt="Avatar ">
+                <img src="assests/img/catigory/step3.png " alt="Avatar ">
                 <i> hart</i>
                 <div class="details ">
                     <p>name shose</p>
@@ -153,14 +227,14 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <section class="foot ">
-        <div class="foo">
+        <div class="foo ">
             <div class="foo1 ">
                 <h2>انظم الى نشرتنا البريدية</h2>
-                <div class="send">
+                <div class="send ">
                     <input type="email " name="email " placeholder="ادخل بريدك الإلكتروني ">
-                    <button type="submit " name="submit"> اشتراك</button>
+                    <button type="submit " name="submit "> اشتراك</button>
 
                 </div>
                 <br><br>
@@ -221,9 +295,9 @@
 
             </div>
         </div>
-        <div class="sociality">
+        <div class="sociality ">
             <h2>تواصل معنا </h2>
-            <div class="social"> <i class="fa fa-facebook-f "></i>
+            <div class="social "> <i class="fa fa-facebook-f "></i>
                 <i class='fa fa-twitter'></i>
                 <i class="fa fa-pinterest "></i>
                 <i class="fa fa-skype "></i>
@@ -236,9 +310,9 @@
             <p>
                 .جميع الحقوق محفوظة لمكتبة جرير © 2015. س.ت. 1010032264.
         </div>
-        <div class="visaCard">
+        <div class="visaCard ">
             <a>
-                <img src="assests/img/logos/2.jpg" alt="Avatar "></a>
+                <img src="assests/img/logos/ " alt="Avatar "></a>
             <a>
                 <img src="assests/img/logos/5.PNG " alt="Avatar "></a>
             <a>
