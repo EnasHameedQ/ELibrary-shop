@@ -52,9 +52,10 @@
                     }
                     
                     .list {
-                        padding-left: 10px;
+                        padding: 0px 10px;
                         border-left: 1px solid gray;
                         list-style: none;
+                        width: fit-content;
                     }
                     
                     .list a {
