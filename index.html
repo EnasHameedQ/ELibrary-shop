@@ -34,9 +34,48 @@
         <!-- start menu -->
         <div class="nav-links">
             <ul class="all_list">
-                <li class=" list login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
-                    <a href=" pages/login.html " target="_self "><img src="assests/img/logos/humen.svg " alt="Avatar ">ادخل لحسابك او سجل الان </a>
+                <!-- login model -->
+
+                <li class=" list login">
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ادخل لحسابك او سجل الآن</button>
                 </li>
+
+                <div id="id01" class="modal">
+
+
+
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <section class="log-in">
+                                <h2>تسجيل الدخول</h2>
+
+                                <input type="email || phone" placeholder="البريد الإلكتروني او رقم الجوال ">
+                                <!-- what type??? -->
+                                <br><br> <input type="password" placeholder="كلمت السر">
+                                <a href="#" class="forget">نسيت؟</a>
+                                <br><br>
+                                <button>تسجيل الدخول</button>
+                                <br><br>
+                                <a href="create_acunt.html" class="did-you "> ليس لديك حساب ؟</a>
+                                <br><br>
+                                <a href="create_acunt.html" class="new-accunt">انشاء حساب جديد </a>
+                            </section>
+                    </form>
+
+                    </div>
+                </div>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id01');
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none ";
+                        }
+                    }
+                </script>
 
                 <li class="list ">
                     <a href="# " target="_self "> <img src="assests/img/logos/star.svg " alt="Avatar ">الرئيسية</a>
@@ -58,9 +97,9 @@
                 </li>
                 <li class=" list english "><a href="#translate " target="_self ">English   <img src="assests/img/logos/translate.svg " alt="Avatar "></a></li>
             </ul>
-        </div>
 
-        <!-- end menu -->
+
+            <!-- end menu -->
 
     </nav>
     <!-- end nav -->
@@ -459,19 +498,8 @@
     </footer>
 </body>
 <!-- js calling -->
-<script src="assests/js/main.js "></script>
-<!-- login model -->
-<script>
-    // Get the modal
-    var modal = document.getElementById('id01');
+<!-- <script src="assests/js/main.js "></script> -->
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none ";
-        }
-    }
-</script>
 
 
 </html>
