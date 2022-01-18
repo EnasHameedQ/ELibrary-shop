@@ -37,7 +37,8 @@
                 <!-- login model -->
 
                 <li class=" list login">
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ادخل لحسابك او سجل الآن</button>
+                    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="assests/img/logos/humen.svg " alt="Avatar ">ادخل لحسابك او سجل الآن</a>
+
                 </li>
 
                 <div id="id01" class="modal">
@@ -57,14 +58,16 @@
                                 <br><br>
                                 <button>تسجيل الدخول</button>
                                 <br><br>
-                                <a href="create_acunt.html" class="did-you "> ليس لديك حساب ؟</a>
+                                <a class="did-you " href="pages/create_acunt.html"> ليس لديك حساب ؟</a>
                                 <br><br>
-                                <a href="create_acunt.html" class="new-accunt">انشاء حساب جديد </a>
+                                <a class=" new-accunt " href="pages/create_acunt.html">انشاء حساب جديد</a>
                             </section>
                     </form>
 
                     </div>
                 </div>
+
+
                 <script>
                     // Get the modal
                     var modal = document.getElementById('id01');
@@ -72,11 +75,11 @@
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
                         if (event.target == modal) {
-                            modal.style.display = "none ";
+                            modal.style.display = " none ";
                         }
                     }
                 </script>
-
+                <!-- end login model -->
                 <li class="list ">
                     <a href="# " target="_self "> <img src="assests/img/logos/star.svg " alt="Avatar ">الرئيسية</a>
                 </li>
@@ -501,5 +504,7 @@
 <!-- <script src="assests/js/main.js "></script> -->
 
 
+
+</html>
 
 </html>
