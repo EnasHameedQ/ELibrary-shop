@@ -139,11 +139,107 @@
                                         padding: 15px;
                                     }
                                     /* start slider section */
+                                    /* start images model used in book_detailes page*/
+                                    
+                                    .myImg {
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .myImg:hover {
+                                        opacity: 0.7;
+                                    }
+                                    /* The Modal (background) */
+                                    
+                                    .modal {
+                                        display: none;
+                                        /* Hidden by default */
+                                        position: fixed;
+                                        /* Stay in place */
+                                        z-index: 1;
+                                        /* Sit on top */
+                                        padding-top: 100px;
+                                        /* Location of the box */
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        /* Full width */
+                                        height: 100%;
+                                        /* Full height */
+                                        overflow: auto;
+                                        /* Enable scroll if needed */
+                                        background-color: rgb(0, 0, 0);
+                                        /* Fallback color */
+                                        background-color: rgba(0, 0, 0, 0.9);
+                                        /* Black w/ opacity */
+                                    }
+                                    /* Modal Content (Image) */
+                                    
+                                    .modal-content {
+                                        margin: auto;
+                                        display: block;
+                                        width: 80%;
+                                        max-width: 700px;
+                                    }
+                                    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+                                    
+                                    #caption {
+                                        margin: auto;
+                                        display: block;
+                                        width: 80%;
+                                        max-width: 700px;
+                                        text-align: center;
+                                        color: #ccc;
+                                        padding: 10px 0;
+                                        height: 150px;
+                                    }
+                                    /* Add Animation - Zoom in the Modal */
+                                    
+                                    .modal-content,
+                                    #caption {
+                                        animation-name: zoom;
+                                        animation-duration: 0.6s;
+                                    }
+                                    
+                                    @keyframes zoom {
+                                        from {
+                                            transform: scale(0);
+                                        }
+                                        to {
+                                            transform: scale(1);
+                                        }
+                                    }
+                                    /* The Close Button */
+                                    
+                                    .close {
+                                        position: absolute;
+                                        top: 15px;
+                                        right: 35px;
+                                        color: #f1f1f1;
+                                        font-size: 40px;
+                                        font-weight: bold;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .close:hover,
+                                    .close:focus {
+                                        color: #bbb;
+                                        text-decoration: none;
+                                        cursor: pointer;
+                                    }
+                                    /* 100% Image Width on Smaller Screens */
+                                    
+                                    @media only screen and (max-width: 700px) {
+                                        .modal-content {
+                                            width: 100%;
+                                        }
+                                    }
+                                    /* end images model */
                                     
                                     .slideshow-container {
                                         padding: 10px;
                                         margin: 0px 30px;
-                                        border: 1px solid #ccc;
                                         max-width: 100vw;
                                         width: 80vw;
                                         position: relative;
@@ -279,14 +375,30 @@
                                         font-family: arial;
                                     }
                                     
+                                    .card_catigories p {
+                                        margin-bottom: 10px;
+                                    }
+                                    
                                     .card_catigories img,
                                     .coupon_container img {
                                         width: 100%;
+                                        height: 200px;
                                     }
                                     
                                     .price {
-                                        color: grey;
-                                        font-size: 22px;
+                                        color: #e91e63;
+                                        font-size: 25px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        flex-wrap: nowrap;
+                                        justify-content: space-evenly;
+                                        align-items: stretch;
+                                    }
+                                    
+                                    .price::after {
+                                        content: 'شامل الضريبة';
+                                        color: #ccc;
+                                        font-size: 10px;
                                     }
                                     
                                     .card_catigories button {
@@ -305,6 +417,35 @@
                                         opacity: 0.7;
                                     }
                                     /* end catigory */
+                                    
+                                    .book_type {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: center;
+                                        align-items: stretch;
+                                        align-content: flex-start;
+                                        flex-direction: row-reverse;
+                                        margin: 10px;
+                                    }
+                                    
+                                    .book_type img {
+                                        /* margin: 10px; */
+                                        width: 40px;
+                                        padding-left: 10px;
+                                        height: 20px;
+                                    }
+                                    
+                                    .process {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-direction: row-reverse;
+                                        align-items: center;
+                                    }
+                                    
+                                    .process img {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
                                     /* start coupons */
                                     
                                     section.coupons {
@@ -318,7 +459,7 @@
                                     }
                                     
                                     .coupon {
-                                        border: 5px dotted #bbb;
+                                        border: 2px solid #607d8b;
                                         width: 20%;
                                         border-radius: 15px;
                                         margin: 50px 0px;
