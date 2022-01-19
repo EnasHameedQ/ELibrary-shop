@@ -8,7 +8,7 @@
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="assests/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assests/css/slider_style.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css" /> -->
+    <link rel="stylesheet" type="text/css" href="assests/css/mediaquiry.css" />
     <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -37,49 +37,106 @@
                 <!-- login model -->
 
                 <li class=" list login">
-                    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="assests/img/logos/humen.svg " alt="Avatar ">ادخل لحسابك او سجل الآن</a>
+                    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="assests/img/logos/humen.svg " alt="Avatar ">ادخل لحسابك او</a>
 
+
+
+                    <div id="id01" class="modal1">
+
+
+
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <section class="log-in">
+                                    <h2>تسجيل الدخول</h2>
+
+                                    <input type="email || phone" placeholder="البريد الإلكتروني او رقم الجوال ">
+                                    <!-- what type??? -->
+                                    <br><br> <input type="password" placeholder="كلمت السر">
+                                    <a href="#" class="forget">نسيت؟</a>
+                                    <br><br>
+                                    <button>تسجيل الدخول</button>
+                                    <br><br>
+                                    <a class="did-you " href="pages/create_acunt.html"> ليس لديك حساب ؟</a>
+                                    <br><br>
+                                    <a class=" new-accunt " href="pages/create_acunt.html">انشاء حساب جديد</a>
+                                </section>
+                        </form>
+
+                        </div>
+                    </div>
+
+
+                    <script>
+                        // Get the modal1
+                        var modal1 = document.getElementById('id01');
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal1) {
+                                modal1.style.display = " none ";
+                            }
+                        }
+                    </script>
+                </li>
+                <!-- end login model -->
+                <li class=" list login">
+                    <a onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><img src="assests/img/logos/circul-humen.svg " alt="Avatar "> سجل الآن</a>
+
+
+
+                    <div id="id02" class="modal">
+
+
+
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <section class="log-in">
+                                    <h2>تسجيل الدخول</h2>
+
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                                    <label>
+                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                                    </label>
+
+                                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                                    <div class="clearfix">
+                                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                                        <button type="submit" class="signup">Sign Up</button>
+                                    </div>
+                            </div>
+                            </section>
+                        </form>
+                    </div>
                 </li>
 
-                <div id="id01" class="modal">
 
-
-
-                    <form class="modal-content animate" action="/action_page.php" method="post">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <section class="log-in">
-                                <h2>تسجيل الدخول</h2>
-
-                                <input type="email || phone" placeholder="البريد الإلكتروني او رقم الجوال ">
-                                <!-- what type??? -->
-                                <br><br> <input type="password" placeholder="كلمت السر">
-                                <a href="#" class="forget">نسيت؟</a>
-                                <br><br>
-                                <button>تسجيل الدخول</button>
-                                <br><br>
-                                <a class="did-you " href="pages/create_acunt.html"> ليس لديك حساب ؟</a>
-                                <br><br>
-                                <a class=" new-accunt " href="pages/create_acunt.html">انشاء حساب جديد</a>
-                            </section>
-                    </form>
-
-                    </div>
-                </div>
 
 
                 <script>
                     // Get the modal
-                    var modal = document.getElementById('id01');
+                    var modal = document.getElementById('id02');
 
                     // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
+                    window.onclick = function(event1) {
+                        if (event1.target == modal) {
                             modal.style.display = " none ";
                         }
                     }
                 </script>
-                <!-- end login model -->
+
+                <!--  end create acount model-->
                 <li class="list ">
                     <a href="# " target="_self "> <img src="assests/img/logos/star.svg " alt="Avatar ">الرئيسية</a>
                 </li>
@@ -269,18 +326,7 @@
                 <img src="assests/img/logos/red-cart.svg ">
                 <img src="assests/img/logos/star.svg "></div>
         </div>
-        <div class="card_catigories ">
-            <img src="assests/img/catigory/ar-book4.jpg ">
-            <div class="book_type ">
-                <h3>كتاب إلكتروني</h3> <img src="assests/img/logos/ar-book1.svg ">
-            </div>
-            <p> كتاب لأنك الله رحلة الى السماء السابعة لكاتبه علي بن جابر الفيفي </p>
-            <p class="price "> ر.س 24.99</p>
-            <div class="process ">
-                <img src="assests/img/logos/return.svg ">
-                <img src="assests/img/logos/red-cart.svg ">
-                <img src="assests/img/logos/star.svg "></div>
-        </div>
+
     </section>
     <!--  -->
     <section class=" catigories ">
@@ -324,18 +370,7 @@
                 <img src="assests/img/logos/red-cart.svg ">
                 <img src="assests/img/logos/star.svg "></div>
         </div>
-        <div class="card_catigories ">
-            <img src="assests/img/catigory/ar-book4.jpg ">
-            <div class="book_type ">
-                <h3>كتاب إلكتروني</h3> <img src="assests/img/logos/ar-book1.svg ">
-            </div>
-            <p> كتاب لأنك الله رحلة الى السماء السابعة لكاتبه علي بن جابر الفيفي </p>
-            <p class="price "> ر.س 24.99</p>
-            <div class="process ">
-                <img src="assests/img/logos/return.svg ">
-                <img src="assests/img/logos/red-cart.svg ">
-                <img src="assests/img/logos/star.svg "></div>
-        </div>
+
     </section>
     <!--  -->
     <section class=" catigories ">
@@ -367,30 +402,8 @@
                 <img src="assests/img/logos/red-cart.svg ">
                 <img src="assests/img/logos/star.svg "></div>
         </div>
-        <div class="card_catigories ">
-            <img src="assests/img/catigory/ar-book3.jpg ">
-            <div class="book_type ">
-                <h3>كتاب إلكتروني</h3> <img src="assests/img/logos/ar-book1.svg ">
-            </div>
-            <p> كتاب لأنك الله رحلة الى السماء السابعة لكاتبه علي بن جابر الفيفي </p>
-            <p class="price "> ر.س 24.99</p>
-            <div class="process ">
-                <img src="assests/img/logos/return.svg ">
-                <img src="assests/img/logos/red-cart.svg ">
-                <img src="assests/img/logos/star.svg "></div>
-        </div>
-        <div class="card_catigories ">
-            <img src="assests/img/catigory/ar-book4.jpg ">
-            <div class="book_type ">
-                <h3>كتاب إلكتروني</h3> <img src="assests/img/logos/ar-book1.svg ">
-            </div>
-            <p> كتاب لأنك الله رحلة الى السماء السابعة لكاتبه علي بن جابر الفيفي </p>
-            <p class="price "> ر.س 24.99</p>
-            <div class="process ">
-                <img src="assests/img/logos/return.svg ">
-                <img src="assests/img/logos/red-cart.svg ">
-                <img src="assests/img/logos/star.svg "></div>
-        </div>
+
+
     </section>
 
     <!-- end categories -->
