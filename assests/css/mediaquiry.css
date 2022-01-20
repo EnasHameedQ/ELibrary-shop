@@ -1,6 +1,43 @@
         @media (min-width:0px) and (max-width:299px) {}
         
-        @media (min-width:310px) and (max-width:600px) {}
+        @media (min-width:310px) and (max-width:600px) {
+            .checkout {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+            }
+            .det::after {
+                position: relative;
+                content: 'منتج قابل للخصم لحاملي بطاقة خصم مكتبة جرير';
+                color: var( --ancor-color);
+                top: 50px;
+                left: 80px;
+                /* bottom: 42px; */
+                font-size: 10px;
+                font-style: italic;
+                /* margin-bottom: -3px; */
+            }
+            .note {
+                background-color: #ffeb3b0f;
+                margin-right: 35px;
+                padding: 20px;
+                border-right: 10px solid #ffc10734;
+                margin: 45px 20px;
+                border-radius: 5px;
+            }
+            .note a {
+                font-size: 12px;
+            }
+            .price,
+            .price_checkout {
+                font-size: 15px;
+                font-weight: 700;
+                flex-direction: column;
+            }
+        }
         
         @media (min-width:601px) and (max-width:767px) {
             .list {
@@ -117,6 +154,48 @@
                 width: 50px;
                 height: 40px;
             }
+            .checkout {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+            }
+            .det::after {
+                position: relative;
+                content: 'منتج قابل للخصم لحاملي بطاقة خصم مكتبة جرير';
+                color: var( --ancor-color);
+                top: 50px;
+                left: 80px;
+                /* bottom: 42px; */
+                font-size: 10px;
+                font-style: italic;
+                /* margin-bottom: -3px; */
+            }
+            .price,
+            .price_checkout,
+            .total {
+                font-size: 14px;
+                font-weight: 700;
+            }
+            .note {
+                background-color: #ffeb3b0f;
+                margin-right: 35px;
+                padding: 20px;
+                border-right: 10px solid #ffc10734;
+                margin: 45px 20px;
+                border-radius: 5px;
+            }
+            .note a {
+                font-size: 12px;
+            }
+            .price,
+            .price_checkout {
+                font-size: 15px;
+                font-weight: 700;
+                flex-direction: column;
+            }
         }
         
         @media (min-width:768px) and (max-width:992px) {
@@ -162,10 +241,27 @@
                 border-radius: 50px;
                 padding: 8px;
             }
+            .det::after {
+                color: var( --ancor-color);
+                top: 40px;
+                left: 85px;
+            }
+            .note {
+                background-color: #ffeb3b0f;
+                margin-right: 35px;
+                padding: 20px;
+                border-right: 10px solid #ffc10734;
+                margin: 35px 0px;
+                border-radius: 5px;
+            }
         }
         
         @media (min-width:993px) and (max-width:1024px) {
             .list {
                 font-size: 14px;
+            }
+            .det::after {
+                top: 35px;
+                left: 125px;
             }
         }
