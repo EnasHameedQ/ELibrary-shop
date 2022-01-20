@@ -49,6 +49,10 @@
             color: var(--text-active-color);
             font-weight: 600;
             box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--active-color);
+            transform: translateX(50%);
+            width: calc(100vw / 5);
+            height: 4px;
+            z-index: -1;
         }
         
         .step__item.is-active:not(:last-of-type)::after {
