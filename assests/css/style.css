@@ -812,7 +812,7 @@ section.catigories {
     margin: 5px 5px;
     box-shadow: 1px -1px 5px 0px rgb(0 0 0 / 20%);
     max-width: 100%;
-    padding: 0px 10px;
+    padding: 0px 0px;
     text-align: center;
     font-family: arial;
 }
@@ -1356,7 +1356,7 @@ section.coupons {
 
 .foo1 {
     width: 200px;
-    /* margin: 6px; */
+    margin: 6px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -2213,6 +2213,10 @@ section.book_details {
     flex-direction: row;
     align-items: flex-start;
     align-content: space-around;
+}
+
+section.book_details .card_catigories {
+    max-width: 15%;
 }
 
 .details {
