@@ -4,341 +4,39 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        background-color: #f1f1f1;
-        font-family: Arial;
-        font-size: 17px;
-        padding: 8px;
-        padding: 5rem 0;
-        font-family: sans-serif;
-        --active-color: #e91e63;
-        --color: #e5e7eb;
-        --text-active-color: rgb(255, 255, 255);
-        --text-color: black;
-    }
-    
-    #regForm {
-        background-color: #ffffff;
-        margin: 100px auto;
-        font-family: Raleway;
-        padding: 40px;
-        width: 70%;
-        min-width: 300px;
-    }
-    
-    h1 {
-        text-align: center;
-    }
-    
-    input {
-        padding: 10px;
-        width: 100%;
-        font-size: 17px;
-        font-family: Raleway;
-        border: 1px solid #aaaaaa;
-    }
-    /* Mark input boxes that gets an error on validation: */
-    
-    input.invalid {
-        background-color: #ffdddd;
-    }
-    /* Hide all steps by default: */
-    
-    .tab {
-        display: none;
-    }
-    
-    button {
-        background-color: var(--active-color);
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 17px;
-        font-family: Raleway;
-        cursor: pointer;
-    }
-    
-    button:hover {
-        opacity: 0.8;
-    }
-    
-    #prevBtn {
-        background-color: var(--color);
-    }
-    /* Make
-    circles that indicate the steps of the form: */
-    
-    .step-wrapper {
-        position: relative;
-        margin: 4rem auto;
-        width: 35vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .step {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: var(--color);
-        color: var(--text-color);
-    }
-    
-    .step.active {
-        background-color: var(--active-color);
-        color: var(--text-active-color);
-        font-weight: 600;
-        box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--active-color);
-    }
-    
-    .step.active::before {
-        background-color: var(--color);
-    }
-    
-    .step:active {
-        content: '';
-        position: absolute;
-        transform: translateX(50%);
-        width: calc(100vw /4);
-        height: 4px;
-        background-color: var(--active-color);
-        z-index: -1;
-    }
-    /* Mark the steps that
-    are finished and valid: */
-    
-    .step.finish {
-        background-color: var(--active-color);
-    }
-    /* data */
-    
-    .row {
-        display: -ms-flexbox;
-        /* IE10 */
-        display: flex;
-        -ms-flex-wrap: wrap;
-        /* IE10 */
-        flex-wrap: wrap;
-        margin: 0 -16px;
-    }
-    
-    .col-25 {
-        -ms-flex: 25%;
-        /* IE10 */
-        flex: 25%;
-    }
-    
-    .col-50 {
-        -ms-flex: 50%;
-        /* IE10 */
-        flex: 50%;
-    }
-    
-    .col-75 {
-        -ms-flex: 75%;
-        /* IE10 */
-        flex: 75%;
-    }
-    
-    .col-25,
-    .col-50,
-    .col-75 {
-        padding: 0 16px;
-    }
-    
-    .container {
-        background-color: #f2f2f2;
-        padding: 5px 20px 15px 20px;
-        border: 1px solid light var(--color);
-        border-radius: 3px;
-    }
-    
-    input[type=text] {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-    }
-    
-    label {
-        margin-bottom: 10px;
-        display: block;
-    }
-    
-    .icon-container {
-        margin-bottom: 20px;
-        padding: 7px 0;
-        font-size: 24px;
-    }
-    
-    .btn {
-        background-color: var(--active-color);
-        color: white;
-        padding: 12px;
-        margin: 10px 0;
-        border: none;
-        width: 100%;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 17px;
-    }
-    
-    .btn:hover {
-        background-color: var(--active-color);
-    }
-    
-    a {
-        color: #2196F3;
-    }
-    
-    hr {
-        border: 1px solid light var(--color);
-    }
-    
-    span.price {
-        float: right;
-        color: var(--color);
-    }
-    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart"
-    column go on top) */
-    
-    @media (max-width: 800px) {
-        .row {
-            flex-direction: column-reverse;
-        }
-        .col-25 {
-            margin-bottom: 20px;
-        }
-    }
-    /*  */
-    /* The Modal (background) */
-    
-    .imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-        position: relative;
-    }
-    
-    .modal {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
-        padding-top: 60px;
-    }
-    /* Modal Content/Box */
-    
-    .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto 15% auto;
-        /* 5% from the top, 15% from the bottom and centered */
-        border: 1px solid #888;
-        width: 80%;
-        /* Could be more or less, depending on screen size */
-    }
-    /* The Close Button (x) */
-    
-    .close {
-        position: absolute;
-        right: 25px;
-        top: 0;
-        color: #000;
-        font-size: 35px;
-        font-weight: bold;
-    }
-    
-    .close:hover,
-    .close:focus {
-        color: red;
-        cursor: pointer;
-    }
-    /* Add Zoom Animation */
-    
-    .animate {
-        -webkit-animation: animatezoom 0.6s;
-        animation: animatezoom 0.6s
-    }
-    
-    @-webkit-keyframes animatezoom {
-        from {
-            -webkit-transform: scale(0)
-        }
-        to {
-            -webkit-transform: scale(1)
-        }
-    }
-    
-    @keyframes animatezoom {
-        from {
-            transform: scale(0)
-        }
-        to {
-            transform: scale(1)
-        }
-    }
-    /* Change styles for span and cancel button on extra small screens */
-    
-    @media screen and (max-width: 300px) {
-        span.psw {
-            display: block;
-            float: none;
-        }
-        .cancelbtn {
-            width: 100%;
-        }
-    }
-    /*  */
-</style>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../assests/css/style.css" />
+
+<link rel="stylesheet" type="text/css" href="../assests/css/mediaquiry.css" />
 
 <body>
+    <section class="stpper">
+        <h2>خطوات عملية الدفع
+        </h2>
 
-    <form id="regForm" action="">
 
-        <h1>Register:</h1>
 
-        <!-- One "tab" for each step in the form: -->
-        <div class="tab">
-            <form action="/action_page.php">
-                <div class="row">
-                    <div class="col-50">
-                        <h3>بيانات العميل</h3>
-                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                        <input type="text" id="email" name="email" placeholder="john@example.com">
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                        <label for="city"><i class="fa fa-institution"></i> City</label>
-                        <input type="text" id="city" name="city" placeholder="New York">
 
-                        <div class="row">
-                            <div class="col-50">
-                                <label for="state">State</label>
-                                <input type="text" id="state" name="state" placeholder="NY">
+        <!-- One "tab " for each step in the form: -->
+        <div class="tab ">
+            <h3>بيانات العميل</h3>
+
+            <form id="regForm " action="../index.html ">
+                <div class="row ">
+                    <div class="col-50 ">
+                        <label for="fname "><i class="fa fa-user "></i> Full Name</label>
+                        <input type="text " id="fname " name="firstname " placeholder="John M. Doe ">
+                        <label for="email "><i class="fa fa-envelope "></i> Email</label>
+                        <input type="text " id="email " name="email " placeholder="john@example.com ">
+                        <label for="adr "><i class="fa fa-address-card-o "></i> Address</label>
+                        <input type="text " id="adr " name="address " placeholder="542 W. 15th Street ">
+                        <label for="city "><i class="fa fa-institution "></i> City</label>
+                        <input type="text " id="city " name="city " placeholder="New York ">
+
+                        <div class="row ">
+                            <div class="col-50 ">
+                                <label for="state ">State</label>
+                                <input type="text " id="state " name="state " placeholder="NY ">
                             </div>
 
                         </div>
@@ -346,107 +44,189 @@
                 </div>
             </form>
         </div>
-        <div class="tab">
-            <form action="/action_page.php">
-                <div class="col-50">
-                    <h3>يانات الدفع</h3>
-                    <label for="fname">Accepted Cards</label>
-                    <div class="icon-container">
-                        <i class="fa fa-cc-visa" style="color:navy;"></i>
-                        <i class="fa fa-cc-amex" style="color:blue;"></i>
-                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                        <i class="fa fa-cc-discover" style="color:orange;"></i>
-                    </div>
-                    <label for="cname">Name on Card</label>
-                    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                    <label for="ccnum">Credit card number</label>
-                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                    <label for="expmonth">Exp Month</label>
-                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+        <div class="tab ">
+            <h3>بيانات الدفع</h3>
 
-                    <div class="row">
-                        <div class="col-50">
-                            <label for="expyear">Exp Year</label>
-                            <input type="text" id="expyear" name="expyear" placeholder="2018">
+            <form action="/action_page.php ">
+                <div class="col-50 ">
+                    <label for="fname ">Accepted Cards</label>
+                    <div class="icon-container ">
+                        <i class="fa fa-cc-visa " style="color:navy; "></i>
+                        <i class="fa fa-cc-amex " style="color:blue; "></i>
+                        <i class="fa fa-cc-mastercard " style="color:red; "></i>
+                        <i class="fa fa-cc-discover " style="color:orange; "></i>
+                    </div>
+                    <label for="cname ">Name on Card</label>
+                    <input type="text " id="cname " name="cardname " placeholder="John More Doe ">
+                    <label for="ccnum ">Credit card number</label>
+                    <input type="text " id="ccnum " name="cardnumber " placeholder="1111-2222-3333-4444 ">
+                    <label for="expmonth ">Exp Month</label>
+                    <input type="text " id="expmonth " name="expmonth " placeholder="September ">
+
+                    <div class="row ">
+                        <div class="col-50 ">
+                            <label for="expyear ">Exp Year</label>
+                            <input type="text " id="expyear " name="expyear " placeholder="2018 ">
                         </div>
-                        <div class="col-50">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="352">
+                        <div class="col-50 ">
+                            <label for="cvv ">CVV</label>
+                            <input type="text " id="cvv " name="cvv " placeholder="352 ">
                         </div>
                     </div>
                 </div>
             </form>
         </div>
 
-        <div class="tab">
-            <form action="/action_page.php">
-                <div class="col-25">
-                    <div class="container">
-                        <h4>Cart
-                            <span class="price" style="color:black">
-                            <i class="fa fa-shopping-cart"></i>
-                            <b>4</b>
-                            </span>
-                        </h4>
-                        <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                        <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                        <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                        <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-                        <hr>
-                        <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-                    </div>
+        <div class="tab ">
+            <h3>بيانات الفاتورة </h3>
+
+
+            <section class="final_bill">
+                <div class="type_name">
+                    <h2>السلة</h2> <img src="../assests/img/logos/cart.svg " alt="Avatar ">
                 </div>
-            </form>
-        </div>
+                <form action=""></form>
+                <div class="checkout">
+                    <div class="product_list">
+                        <div class="product">
+                            <div class="details">
+                                <div class="det"><img src="../assests/img/catigory/ar-book1 (1).jpg " alt="Avatar ">
+                                    <p class="book_name ">لأنك الله (كتاب إلكتروني)</p>
+                                </div>
+                                <p class="price_checkout">3.99 ر.س</p>
 
-        <div class="tab">
+                            </div>
 
-            <h2>Modal </h2>
+                            <div class="note ">
+                                <p>
+                                    <span>ملاحظة</span>هذا الكتاب رقمي وسيتم توصيله من خلال البريد الإلكتروني</p>
+                                <a href="# ">كيفية الحصول على المنتج ؟</a>
+                            </div>
+                            <div class="delete">
 
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> هل انت موافق؟</button>
+                                <h6>حذف</h6> <img src="../assests/img/logos/star.svg " alt="Avatar ">
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="details">
+                                <div class="det"><img src="../assests/img/catigory/ar-book4.jpg  " alt="Avatar ">
+                                    <p class="book_name ">فن اللامبالاه (كتاب إلكتروني)</p>
+                                </div>
+                                <p class="price_checkout">29.99 ر.س</p>
 
-            <div id="id01" class="modal">
+                            </div>
 
-                <form class="modal-content animate" action="/action_page.php" method="post">
-                    <div class="imgcontainer">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <p> تم الشراء بنجاح</p>
+                            <div class="note ">
+                                <p>
+                                    <span>ملاحظة</span>هذا الكتاب رقمي وسيتم توصيله من خلال البريد الإلكتروني</p>
+                                <a href="# ">كيفية الحصول على المنتج</a>
+                            </div>
+                            <div class="delete">
+
+                                <h6>حذف</h6> <img src="../assests/img/logos/star.svg " alt="Avatar ">
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="details">
+                                <div class="det"><img src="../assests/img/catigory/ar-book3.jpg  " alt="Avatar ">
+                                    <p class="book_name ">غدا اجمل (كتاب إلكتروني)</p>
+                                </div>
+                                <p class="price_checkout">34.99 ر.س</p>
+
+                            </div>
+
+                            <div class="note ">
+                                <p>
+                                    <span>ملاحظة</span>هذا الكتاب رقمي وسيتم توصيله من خلال البريد الإلكتروني</p>
+                                <a href="# ">كيفية الحصول على المنتج</a>
+                            </div>
+                            <div class="delete">
+
+                                <h6>حذف</h6> <img src="../assests/img/logos/star.svg " alt="Avatar ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bill">
+                        <div class="bill_details">
+                            <div class="table">
+                                <h5>المجموع </h5>
+                                <p class="total">68.97 ر.س </p>
+                            </div>
+                            <div class="table">
+                                <h5> تكاليف الشحن </h5>
+                                <p class="free">مجاني</p>
+                            </div>
+                            <div class="table">
+                                <h2 class="price"> المجموع الكلي</h2>
+                                <p class="price_checkout">68.97 ر.س</p>
+                            </div>
+                        </div>
+                        <div class="privecy">
+                            <p> بالضغط على"إنهاءالتسوق"فأنت توافق على
+                                <a href="#">الشروط</a>
+                                <a href="#">وسياسة الخصوصي </a>
+                            </p>
+                            <button class="fenish" onclick="document.getElementById( 'sucses').style.display='block' "> هل انت موافق على إنهاءالتسوق ؟</button>
+
+                        </div>
+
+                        <div id="sucses " class="modal ">
+
+                            <h2>تم الشراء بنجاح</h2>
+                            <form class="modal-content animate " action="../index.html " method="post ">
+                                <div class="succses_pament ">
+                                    <span onclick="document.getElementById( 'sucses').style.display='none' " class="close " title="Close Modal ">&times;</span>
+                                    <h2>تم الشراء بنجاح</h2>
+                                    <p> </p>
+                                </div>
+
+
+                            </form>
+                        </div>
                     </div>
 
 
-                </form>
-            </div>
+
+                </div>
+
+            </section>
 
         </div>
+
+
+
+
         <script>
             // Get the modal
-            var modal = document.getElementById('id01');
+            var modal = document.getElementById('sucses');
 
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
+                    modal.style.display = "none ";
                 }
             }
         </script>
-        <div style="overflow:auto;">
-            <div style="float:right;">
-                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <div style="overflow:auto; ">
+            <div style="float:right; ">
+                <button class="stpper_button " type="button " id="prevBtn " onclick="nextPrev(-1) ">السابق</button>
+                <button class="stpper_button " type="button " id="nextBtn " onclick="nextPrev(1) ">التالي</button>
+
             </div>
         </div>
 
         <!-- Circles which indicates the steps of the form: -->
-        <div class="step-wrapper">
-            <span class="step">1</span>
-            <span class="step">2</span>
-            <span class="step">3</span>
-            <span class="step">4</span>
+        <div class="step-wrapper ">
+            <span class="step ">1</span>
+            <span class="step ">2</span>
+            <span class="step ">3</span>
+
         </div>
 
-    </form>
+        </form>
 
-
+    </section>
 </body>
 <!-- js -->
 <script>
@@ -455,18 +235,18 @@
 
     function showTab(n) {
         // This function will display the specified tab of the form ...
-        var x = document.getElementsByClassName("tab");
-        x[n].style.display = "block";
+        var x = document.getElementsByClassName("tab ");
+        x[n].style.display = "block ";
         // ... and fix the Previous/Next buttons:
         if (n == 0) {
-            document.getElementById("prevBtn").style.display = "none";
+            document.getElementById("prevBtn ").style.display = "none ";
         } else {
-            document.getElementById("prevBtn").style.display = "inline";
+            document.getElementById("prevBtn ").style.display = "inline ";
         }
         if (n == (x.length - 1)) {
-            document.getElementById("nextBtn").innerHTML = "Submit";
+            document.getElementById("nextBtn ").innerHTML = " اجل موافق ";
         } else {
-            document.getElementById("nextBtn").innerHTML = "Next";
+            document.getElementById("nextBtn ").innerHTML = "التالي ";
         }
         // ... and run a function that displays the correct step indicator:
         fixStepIndicator(n)
@@ -474,17 +254,17 @@
 
     function nextPrev(n) {
         // This function will figure out which tab to display
-        var x = document.getElementsByClassName("tab");
+        var x = document.getElementsByClassName("tab ");
         // Exit the function if any field in the current tab is invalid:
         if (n == 1 && !validateForm()) return false;
         // Hide the current tab:
-        x[currentTab].style.display = "none";
+        x[currentTab].style.display = "none ";
         // Increase or decrease the current tab by 1:
         currentTab = currentTab + n;
         // if you have reached the end of the form... :
         if (currentTab >= x.length) {
             //...the form gets submitted:
-            document.getElementById("regForm").submit();
+            document.getElementById("regForm ").submit();
             return false;
         }
         // Otherwise, display the correct tab:
@@ -494,34 +274,36 @@
     function validateForm() {
         // This function deals with validation of the form fields
         var x, y, i, valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
+        x = document.getElementsByClassName("tab ");
+        y = x[currentTab].getElementsByTagName("input ");
         // A loop that checks every input field in the current tab:
         for (i = 0; i < y.length; i++) {
             // If a field is empty...
-            if (y[i].value == "") {
-                // add an "invalid" class to the field:
-                y[i].className += " invalid";
+            if (y[i].value == " ") {
+                // add an "invalid " class to the field:
+                y[i].className += " invalid ";
                 // and set the current valid status to false:
                 valid = false;
             }
         }
         // If the valid status is true, mark the step as finished and valid:
         if (valid) {
-            document.getElementsByClassName("step")[currentTab].className += " finish";
+            document.getElementsByClassName("step ")[currentTab].className += " finish ";
         }
         return valid; // return the valid status
     }
 
     function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
-        var i, x = document.getElementsByClassName("step");
+        // This function removes the "active " class of all steps...
+        var i, x = document.getElementsByClassName("step ");
         for (i = 0; i < x.length; i++) {
-            x[i].className = x[i].className.replace(" active", "");
+            x[i].className = x[i].className.replace(" active ", " ");
         }
-        //... and adds the "active" class to the current step:
-        x[n].className += " active";
+        //... and adds the "active " class to the current step:
+        x[n].className += " active ";
     }
 </script>
+
+</html>
 
 </html>

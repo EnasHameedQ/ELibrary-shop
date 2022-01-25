@@ -5,29 +5,265 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../assests/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../assests/css/mediaquiry.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- Trigger the Modal -->
-    <img class="myImg" src="https://picsum.photos/300/300?random=1" alt="Snow" onclick="image(event)" style="width:100%;max-width:300px" />
+    <!-- nav & headeer-->
+    <!--  breadcamb -->
 
-    <img class="myImg" src="https://picsum.photos/300/300?random=2" alt="Snow" onclick="image(event)" style="width:100%;max-width:300px" />
-
-    <img class="myImg" src="https://picsum.photos/300/300?random=3" alt="Snow" onclick="image(event)" style="width:100%;max-width:300px" />
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
+    <div class="breadcamp ">
+        <!-- تتبع مسار الروابط  -->
+        <p> الرئسية /الكتب العربية / كتب إلكترونية</p>
     </div>
+
+
+    <section class="book_details">
+
+        <div class="card_catigories">
+
+            <img src="../assests/img/logos/ar-book1.svg ">
+
+
+            <div class="book_imgs">
+                <!-- Trigger the Modal -->
+                <img class="myImg" src="../assests/img/catigory/ar-book3.jpg " alt="Snow" onclick="image(event)" />
+
+                <img class="myImg" src="../assests/img/catigory/ar-book2.jpg " alt="Snow" onclick="image(event)" />
+
+                <img class="myImg" src="../assests/img/catigory/ar-book1 (1).jpg " alt="Snow" onclick="image(event)" />
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <span class="close">&times;</span>
+
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img01">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+            </div>
+        </div>
+        <div class="details">
+            <div class="detail">
+                <p class=" book_name "> لأنك الله (كتاب إلكتروني)</p>
+                <a>عرض المزيد <i class="fa fa-arrow-down " aria-hidden="true "></i></a>
+                <p class="price_right "> 12.99 ر.س</p>
+            </div>
+            <div class="det_left ">
+
+            </div>
+            <div class="formula ">
+                <form>
+                    <label> الصيغ المتوفرة 
+                            <input type='checkbox '>كتاب مطبوع
+                <p class="price_left "> 12.99 ر.س</p>
+
+                <input type='checkbox '>كتاب إلكتروني
+                <p class="price_left ">17.25 ر.س</p>
+                </label>
+                </form>
+            </div>
+        </div>
+        <div class=" bill ">
+            <div class="bill_cart">
+
+
+                <div class=" note ">
+                    <p>
+                        <span>ملاحظة</span>هذا الكتاب رقمي وسيتم توصيله من خلال البريد الإلكتروني</p>
+                    <a href="# ">كيفية الحصول على المنتج</a>
+                </div>
+                <div class="counnter ">
+                    <input type="number " min="0 " max="10 " value="1 ">
+                    <!-- الشرط ان المدخل يكون رقم ظمن المحدد
+                                 واذا دخل المستخدم عدد غير موجوديشر احمر ويمنع الكتابة
+                                 ( advance html ,css &js تطبيق اخر درس في ) -->
+                    <!--
+                                or div with on click +&- for each one
+                                <button class="plus " onclick=" ">+</button>
+                            <button class="minus " onclick=" ">-</button> -->
+                    <div class="fenish ">
+                        تحديث سلة التسوق
+                    </div>
+                </div>
+            </div>
+            <div class="procedures ">
+                <div class="procedures_card">
+                    المقارنة
+                    <img src="../assests/img/logos/return.svg">
+                </div>
+                <div class="procedures_card">
+                    المشاركة
+                    <img src="../assests/img/logos/ask.svg">
+                </div>
+
+                <div class="procedures_card ">
+                    المفضلة
+                    <img src="../assests/img/logos/ask.svg ">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <hr>
+    <section class="descriptions ">
+        <hr>
+        <h3>المواصفات </h3>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">رقم الصنف</p>
+            <p class="desc ">JBB410156</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">رقم المنتج</p>
+            <p class="desc ">4</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">المؤلف </p>
+            <p class="desc ">علي جابر الفيفي</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">الناشر </p>
+            <p class="desc ">دار الحضارة للنشر والتوزيع</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">تاريخ النشر </p>
+            <p class="desc ">2016</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name "> صيغة الكتاب</p>
+            <p class="desc ">Ebook</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">عدد الصفحات </p>
+            <p class="desc ">182</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">وزن الشحن</p>
+            <p class="desc ">0.0100</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">صيغة الملف</p>
+            <p class="desc ">epub</p>
+        </div>
+        <div class="desrcip ">
+
+            <p class="desrcip_name ">اللغة </p>
+            <p class="desc ">عربي</p>
+        </div>
+        <p class="show_less"> عرض اقل</p>
+    </section>
+    <section class="cus_reviews ">
+        <hr>
+        <div class="cus-title">
+            <h3>مراجعات العملاء </h3>
+            <button class="add-review">اكتب مراجعتك +</button>
+        </div>
+        <div class="reviews ">
+
+            <div class="gray">
+                <p class="review ">good</p>
+                <p class="cus_name "> باسم امين</p>
+                <p class="date">2022/1/22</p>
+            </div>
+            <p class="evalution">جيد جدا</p>
+
+        </div>
+        <div class="reviews ">
+
+            <div class="gray">
+                <p class="review ">good</p>
+                <p class="cus_name "> باسم امين</p>
+                <p class="date">2022/1/22</p>
+            </div>
+            <p class="evalution">جيد جدا</p>
+
+        </div>
+        <div class="reviews ">
+
+            <div class="gray">
+                <p class="review ">good</p>
+                <p class="cus_name "> باسم امين</p>
+                <p class="date">2022/1/22</p>
+            </div>
+            <p class="evalution">جيد جدا</p>
+
+        </div>
+        <div class="reviews ">
+
+            <div class="gray">
+                <p class="review ">good</p>
+                <p class="cus_name "> باسم امين</p>
+                <p class="date cus_name">2022/1/22</p>
+            </div>
+            <p class="evalution">جيد جدا</p>
+
+        </div>
+        <p class="show_less"> عرض اقل</p>
+
+    </section>
+
+    <section class="catigories ">
+        <hr>
+        <h2 class="type_name ">كتب مشابهة</h2>
+        <br> <br>
+        <div class="card_catigories ">
+            <a href=" ">
+                <img src="../assests/img/catigory/ar-book1 (1).jpg ">
+                <p class="book_name ">الله</p>
+                <p class="price "> 29.99 ر.س</p>
+            </a>
+        </div>
+        <div class="card_catigories ">
+            <a href=" ">
+                <img src="../assests/img/catigory/ar-book1 (1).jpg ">
+                <p class="book_name ">الله</p>
+                <p class="price "> 29.99 ر.س</p>
+            </a>
+        </div>
+        <div class="card_catigories ">
+            <a href=" ">
+                <img src="../assests/img/catigory/ar-book1 (1).jpg ">
+                <p class="book_name ">الله</p>
+                <p class="price "> 29.99 ر.س</p>
+            </a>
+        </div>
+        <div class="card_catigories ">
+            <a href=" ">
+                <img src="../assests/img/catigory/ar-book1 (1).jpg ">
+                <p class="book_name ">الله</p>
+                <p class="price "> 29.99 ر.س</p>
+            </a>
+        </div>
+        <div class="card_catigories ">
+            <a href=" ">
+                <img src="../assests/img/catigory/ar-book1 (1).jpg ">
+                <p class="book_name ">الله</p>
+                <p class="price "> 29.99 ر.س</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- foot & footer -->
 </body>
+<script src="../assests/js/main.js "></script>
 
 </html>

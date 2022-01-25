@@ -196,6 +196,18 @@
                 font-weight: 700;
                 flex-direction: column;
             }
+            section.catigories_all {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                align-items: stretch;
+                align-content: center;
+            }
+            section.catigories_all .card_catigories {
+                margin-right: 20px;
+                max-width: 40%;
+            }
         }
         
         @media (min-width:768px) and (max-width:992px) {
