@@ -224,11 +224,34 @@
                     <option> الدينار الكويتي د.ك</option>
                     <option> الدولار الامريكي $ </option>
                     </select>
-                    <div class="filter_price ">
-                        <!-- progeres -->
-                        <progress title=" " max="300 " min="30 "></progress>
-                        <label></label>
+
+
+
+                    <div class="filter-price">
+
+                        <div class="price-field">
+                            <input type="range" min="100" max="500" value="135" id="lower">
+                            <input type="range" min="100" max="500" value="500" id="upper">
+                        </div>
+                        <div class="price-wrap">
+
+                            <div class="price-container">
+                                <div class="price-wrap-1">
+
+                                    <label for="one">ر.س</label>
+                                    <input id="one">
+                                </div>
+                                <div class="price-wrap_line">-</div>
+                                <div class="price-wrap-2">
+                                    <label for="two">ر.س</label>
+                                    <input id="two">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                     <select class="filter_kind ">
                     <option>صيغة الكتاب</option>
                     <option>مطبوع</option>
@@ -393,6 +416,11 @@
                 <h2>انظم الى نشرتنا البريدية</h2>
                 <div class="send ">
                     <input type="email " name="email " placeholder="ادخل بريدك الإلكتروني ">
+                    <svg class="email-icon " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 24 24 " width="24 " height="24 ">
+                                        <path fill="none " d="M0 0h24v24H0z " />
+                                        <path
+                                            d="M18 8h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V7a6 6 0 1 1 12 0v1zm-7 7.732V18h2v-2.268a2 2 0 1 0-2 0zM16 8V7a4 4 0 1 0-8 0v1h8z " />
+                                    </svg>
                     <button type="submit " name="submit "> اشتراك</button>
 
                 </div>

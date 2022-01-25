@@ -633,7 +633,7 @@ a.prev {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 55%;
+    top: 65%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -817,10 +817,6 @@ section.catigories {
     font-family: arial;
 }
 
-.card_catigories p {
-    margin-bottom: 10px;
-}
-
 .card_catigories img,
 .coupon_container img {
     width: 85%;
@@ -848,7 +844,8 @@ section.catigories {
 }
 
 .price_left {
-    align-items: flex-end;
+    margin-right: 80px;
+    /* align-items: flex-end; */
 }
 
 .total {
@@ -1144,6 +1141,12 @@ section.coupons {
     padding: 5px;
     margin-bottom: 10px;
     background-color: #eff2f7;
+}
+
+svg.email-icon {
+    position: relative;
+    bottom: 40px;
+    right: 65px;
 }
 
 .social {
@@ -1489,6 +1492,7 @@ section.final_bill {
 p.book_name {
     font-weight: 600;
     margin-right: 20px;
+    color: var(--ancor-color);
 }
 
 .det::after {
@@ -1857,7 +1861,7 @@ column go on top) */
 
 h3 {
     font-weight: 700;
-    color: crimson;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -1982,6 +1986,21 @@ section.book_details {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+
+.det_between {
+    display: flex;
+}
+
+input[type="radio\ "] {
+    border-radius: 50px;
+    width: 5px;
+    height: 5px;
+    margin-left: 3px;
+}
+
+input[type="radio\ "]:focus {
+    border: 6px solid var(--blue-color);
 }
 
 section.book_details .bill {
@@ -2117,3 +2136,207 @@ p.date {
 p.evalution {
     padding: 0px 20px 0px;
 }
+
+
+/*  filter by price */
+
+.price-container {
+    display: flex;
+    padding: 5px;
+    margin-left: 57px;
+    width: 100px;
+    z-index: 0;
+}
+
+.price-field {
+    height: 36px;
+    padding-left: 0px;
+}
+
+.price-field input[type=range] {
+    position: absolute;
+}
+
+
+/* Reset style for input range */
+
+.price-field input[type=range] {
+    width: 200px;
+    height: 36px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    background-color: azure;
+}
+
+.price-field input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.price-field input[type=range]:active,
+.price-field input[type=range]:focus {
+    outline: 0;
+}
+
+.price-field input[type=range]::-ms-track {
+    width: 188px;
+    height: 2px;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    pointer-events: none;
+    background: transparent;
+    border-color: transparent;
+    color: red;
+    border-radius: 5px;
+}
+
+
+/* Style toddler input range */
+
+.price-field input[type=range]::-webkit-slider-thumb {
+    /* WebKit/Blink */
+    position: relative;
+    -webkit-appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    height: 10px;
+    width: 10px;
+    margin-top: -4px;
+    background-color: red;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+.price-field input[type=range]::-moz-range-thumb {
+    /* Firefox */
+    position: relative;
+    appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    height: 10px;
+    width: 10px;
+    margin-top: -5px;
+    background-color: red;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+.price-field input[type=range]::-ms-thumb {
+    /* IE */
+    position: relative;
+    appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    height: 10px;
+    width: 10px;
+    margin-top: -5px;
+    background-color: #242424;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+
+/* Style track input range */
+
+.price-field input[type=range]::-webkit-slider-runnable-track {
+    /* WebKit/Blink */
+    width: 188px;
+    height: 2px;
+    cursor: pointer;
+    background: #555;
+    border-radius: 5px;
+}
+
+.price-field input[type=range]::-moz-range-track {
+    /* Firefox */
+    width: 188px;
+    height: 2px;
+    cursor: pointer;
+    background: #242424;
+    border-radius: 5px;
+}
+
+.price-field input[type=range]::-ms-track {
+    /* IE */
+    width: 188px;
+    height: 2px;
+    cursor: pointer;
+    background: #242424;
+    border-radius: 5px;
+}
+
+
+/* Style for input value block */
+
+.price-wrap {
+    display: flex;
+    color: var(--text-color);
+    font-size: 14px;
+    /* line-height: 1.2em; */
+    font-weight: 400;
+    margin-bottom: 0px;
+    background-color: azure;
+}
+
+.price-wrap-1,
+.price-wrap-2 {
+    display: flex;
+    margin-left: 0px;
+}
+
+.price-title {
+    margin-right: 5px;
+}
+
+.price-wrap_line {
+    margin: 6px 0px 5px 5px;
+}
+
+.price-wrap #one,
+.price-wrap #two {
+    width: 30px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-right: 2px;
+    background: 0;
+    border: 0;
+    outline: 0;
+    color: #242424;
+    font-family: 'Karla', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+.price-wrap label {
+    text-align: right;
+    margin-top: 6px;
+    padding-left: 5px;
+}
+
+
+/* Style for active state input */
+
+.price-field input[type=range]:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 0 0.5px #242424;
+    transition-duration: 0.3s;
+}
+
+.price-field input[type=range]:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 0.5px #242424;
+    transition-duration: 0.3s;
+}
+
+
+/*  */
