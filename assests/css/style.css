@@ -2097,7 +2097,7 @@ column go on top) */
     margin: 24px 0 12px 0;
     position: relative;
     color: var(--text-color);
-    background-color: var(--after-color-);
+    background-color: var(--after-color);
     font-size: 40px;
     font-weight: 700px;
 }
