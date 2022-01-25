@@ -130,24 +130,24 @@ setInterval(() => {
 
 //end timer for coupons//
 // // Get the  modalImage
-var modalImage = document.getElementById("myImg");
+// var modalImage = document.getElementById("myImg");
 
-// Get the image and insert it inside the  modalImage - use its "alt" text as a caption
-// var img = $(".myImg");
-var modalImageImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+// // Get the image and insert it inside the  modalImage - use its "alt" text as a caption
+// // var img = $(".myImg");
+// var modalImageImg = document.getElementById("img01");
+// var captionText = document.getElementById("caption");
 
-function image(event) {
-    modalImage.style.display = "block";
-    modalImageImg.src = event.target.src;
-    captionText.innerHTML = event.target.alt;
-}
+// function image(event) {
+//     modalImage.style.display = "block";
+//     modalImageImg.src = event.target.src;
+//     captionText.innerHTML = event.target.alt;
+// }
 
-// Get the <span> element that closes the  modalImage
-var span = document.getElementsByClassName("close")[0];
+// // Get the <span> element that closes the  modalImage
+// var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the  modalImage
-span.onclick = () => {
-        modalImage.style.display = "none";
-    }
-    //     //end images model
+// // When the user clicks on <span> (x), close the  modalImage
+// span.onclick = () => {
+//         modalImage.style.display = "none";
+//     }
+//     //     //end images model
