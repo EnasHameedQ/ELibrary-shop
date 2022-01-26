@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body id="body">
 
     <!-- nav -->
     <nav>
@@ -36,7 +36,7 @@
         <!-- end burger menu -->
 
         <!-- start menu -->
-        <div class="nav-links">
+        <div class="nav-links  changeDirection">
             <ul class="all_list">
                 <!-- login model -->
 
@@ -84,12 +84,29 @@
             </div>
             <a href="pages/checkout.html" target=""> <i class=" fa fa-cart-plus " aria-hidden="true "></i>
             </a>
-            <div class="second_nav ">
+            <div class="changeDir">
+                <!-- <div class='options'>
+                    <button onclick='changeToRTL()'>Right to Left</button>
+                    <button onclick='changeToLTR()'>Left to Right</button>
+                </div>
 
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
+                <script>
+                    function changeToLTR() {
+                        // document.getElementsByTagName("body").classList.remove('direction-rtl');
+                        document.getElementsByTagName("body").classList.add('direction-ltr');
+                    }
+
+                    function changeToRTL() {
+                        document.getElementsByTagName('body').removeClass('direction-ltr').addClass('direction-rtl');
+                    }
+                </script> -->
+
+
+
+                <button type="button" onclick="document.getElementById('body').style.direction= 'ltr'">
+left to right</button>
+                <button type="button" onclick="document.getElementById('body').style.direction = 'rtl'">
+right to left </button>
         </section>
         <!-- start slider -->
 
@@ -182,7 +199,7 @@
     </header>
     <!-- end header -->
     <!--start all books categoris  -->
-    <section class="all_categories">
+    <section class="all_categories changeDirection">
 
         <h2 class="type_name ">تصفح حسب القسم </h2>
 
@@ -272,7 +289,7 @@
     <!-- start ADS -->
     <!-- end ADS -->
     <!-- start copons cards -->
-    <section class="coupons ">
+    <section class="coupons changeDirection">
 
         <h2 class="type_name ">العروض الحالية </h2>
         <div class="card_catigories ">
@@ -389,7 +406,7 @@
     </section>
     <!-- end copons -->
     <!-- start catigories -->
-    <section class=" catigories ">
+    <section class=" catigories  changeDirection">
         <h2 class="type_name ">الكتب الدينية</h2>
         <br> <br>
         <div class="card_catigories ">
@@ -495,7 +512,7 @@
         </div>
     </section>
     <!--  -->
-    <section class=" catigories ">
+    <section class=" catigories changeDirection ">
         <h2 class="type_name ">الكتب التاريخية</h2>
         <br> <br>
         <div class="card_catigories ">
@@ -602,7 +619,7 @@
 
     </section>
     <!--  -->
-    <section class=" catigories ">
+    <section class=" catigories  changeDirection">
         <h2 class="type_name ">كتب سياسية</h2>
         <br> <br>
         <div class="card_catigories ">
@@ -709,7 +726,7 @@
         </div>
 
     </section>
-    <section class=" catigories ">
+    <section class=" catigories changeDirection">
         <h2 class="type_name ">كتب اقتصاد</h2>
         <br> <br>
         <div class="card_catigories ">
@@ -814,7 +831,7 @@
 
         </div>
     </section>
-    <section class=" catigories ">
+    <section class=" catigories  changeDirection">
         <h2 class="type_name ">كتب طبخ</h2>
         <br> <br>
         <div class="card_catigories ">
@@ -923,7 +940,7 @@
 
     <!-- end categories -->
     <!-- start footer  -->
-    <section class="foot ">
+    <section class="foot changeDirection ">
         <div class="foo ">
             <div class="foo1 ">
                 <h2>انظم الى نشرتنا البريدية</h2>
@@ -1007,8 +1024,8 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="copy-right ">
+    <footer class="changeDirection">
+        <div class=" copy-right ">
             <p>
                 .جميع الحقوق محفوظة لمكتبة جرير © 2015. س.ت. 1010032264.
         </div>
