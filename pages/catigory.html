@@ -16,13 +16,18 @@
 
 </head>
 
-<body>
+<body id="body">
 
     <!-- nav -->
     <nav>
         <!-- start burger menu -->
         <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
 
+            </div>
+
+        </div>
         <div class="nav-btn">
             <label for="nav-check">
                     <span></span>
@@ -33,32 +38,32 @@
         <!-- end burger menu -->
 
         <!-- start menu -->
-        <div class="nav-links">
+        <div class="nav-links  changeDirection">
             <ul class="all_list">
                 <!-- login model -->
 
                 <li class=" list login">
-                    <a href="#" onclick="showloginModal()"> <img src="../assests/img/logos/humen.svg " alt="Avatar ">ادخل لحسابك أو سجل الآن </a>
+                    <a href="#" onclick="showloginModal()"> <img src="assests/img/logos/humen.svg " alt="Avatar ">ادخل لحسابك أو سجل الآن </a>
                 </li>
                 <li class="list ">
-                    <a href="../index.html " target="_self "> <img src="../assests/img/logos/star.svg " alt="Avatar ">الرئيسية</a>
+                    <a href="# " target="_self "> <img src="assests/img/logos/star.svg " alt="Avatar ">الرئيسية</a>
                 </li>
                 <li class="list ">
-                    <a href="#About " target="_self "><img src="../assests/img/logos/star.svg " alt="Avatar "> من نحن </a>
+                    <a href="#About " target="_self "><img src="assests/img/logos/star.svg " alt="Avatar "> من نحن </a>
                 </li>
                 <li class="list ">
-                    <a href="#call " target="_self "> <img src="../assests/img/logos/call.svg " alt="Avatar ">اتصل بنا</a>
+                    <a href="#call " target="_self "> <img src="assests/img/logos/call.svg " alt="Avatar ">اتصل بنا</a>
                 </li>
                 <li class="list dropdown ">
-                    <a href="#help " target="_self "> <img src="../assests/img/logos/help.svg " alt="Avatar ">المساعدة </a>
+                    <a href="#help " target="_self "> <img src="assests/img/logos/help.svg " alt="Avatar ">المساعدة </a>
                 </li>
                 <li class="list ">
-                    <a href="#security " target="_self "> <img src="../assests/img/logos/security.svg " alt="Avatar ">سياسة الخصوصية </a>
+                    <a href="#security " target="_self "> <img src="assests/img/logos/security.svg " alt="Avatar ">سياسة الخصوصية </a>
                 </li>
                 <li class="list national-icon ">
-                    <a href="#yemen " target="_self "><img src="../assests/img/logos/ye.svg " alt="Avatar "> YER اليمن</a>
+                    <a href="#yemen " target="_self "><img src="assests/img/logos/ye.svg " alt="Avatar "> YER اليمن</a>
                 </li>
-                <li class=" list english "><a href="#translate " target="_self ">English   <img src="../assests/img/logos/translate.svg " alt="Avatar "></a></li>
+                <li class=" list english "><a href="#translate " target="_self ">English   <img src="assests/img/logos/translate.svg " alt="Avatar "></a></li>
             </ul>
 
 
@@ -69,7 +74,7 @@
     <!-- start header -->
     <header>
         <section class="serch_heder">
-            <a href="#"> <img src="../assests/img/catigory/step2.png " alt="logo " /></a>
+            <a href="#"> <img src="assests/img/catigory/step3.png " alt="logo " /></a>
             <div class="search-container ">
                 <form action="/action_page.php ">
                     <div class="input-icons ">
@@ -79,13 +84,17 @@
                     </div>
                 </form>
             </div>
-            <a href="checkout.html" target=""> <i class=" fa fa-cart-plus " aria-hidden="true "></i>
-            </a>
-            <div class="second_nav ">
-
-                <ul>
-                    <li></li>
-                </ul>
+            <div class="cart">
+                <a href="pages/checkout.html" target=""> <i class=" fa fa-cart-plus " aria-hidden="true "></i>
+                </a>
+            </div>
+            <div class="changeDir">
+                <button type="button" onclick="document.getElementById('body').style.direction= 'ltr'">
+                    left to right
+                    </button>
+                <button type="button" onclick="document.getElementById('body').style.direction = 'rtl'">
+                    right to left
+                    </button>
             </div>
         </section>
         <!-- start slider -->
@@ -417,7 +426,7 @@
                         <img src="../assests/img/logos/star.svg "></div>
                 </div>
             </div>
-            <div class="show more ">عرض المزيد</div>
+            <div class="show_more ">عرض المزيد</div>
         </section>
 
 
