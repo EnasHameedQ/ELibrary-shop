@@ -149,6 +149,14 @@ i.fa.fa-cart-plus {
     padding: 15px;
 }
 
+i.fa.fa-cart-plus::after {
+    content: '0';
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    color: var(--ancor-color);
+}
+
 
 /* start slider section */
 
@@ -2227,6 +2235,47 @@ section.book_details .card_catigories {
     color: var(--blue-color);
 }
 
+.det_left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.det_left p {
+    color: var(--ancor-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+p.blue_rev {
+    color: var(--blue-color);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.stars img {
+    padding-left: 5px;
+    width: 20px;
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+    color: var(--ancor-color);
+}
+
+.inline p {
+    padding-right: 20px;
+}
+
 .formula {
     display: flex;
     align-items: center;
@@ -2319,9 +2368,15 @@ section.cus_reviews {
 
 section.descriptions hr,
 section.cus_reviews hr,
-section.catigories hr {
+.catigories hr {
     border-top: 1px solid var(--after-color);
     padding-top: 20px;
+}
+
+.disc {
+    padding: 15px;
+    background-color: var(--input-background);
+    border: 1px solid var(--after-color);
 }
 
 .desrcip {
