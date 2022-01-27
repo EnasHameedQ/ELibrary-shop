@@ -21,6 +21,8 @@ function showSlides() {
 // end slide show //
 // start login &creatAcount models//
 /*Displaying and hiding modals "Sign in Modal" and " Sign up modal"*/
+
+/*Displaying and hiding modals "Sign in Modal" and " Sign up modal"*/
 const showloginModal = modal => {
     document.getElementById("login-modal-container").style.display = "block";
 }
@@ -38,11 +40,14 @@ const hidesigninModal = hide => {
 
 }
 const showloginModalAgain = showLogin => {
-        document.getElementById("signin-modal-container").style.display = "none";
-        document.getElementById("login-modal-container").style.display = "block";
-    }
-    // end login &creatAcount models//
-    //srat timer for coupons//
+    document.getElementById("signin-modal-container").style.display = "none";
+    document.getElementById("login-modal-container").style.display = "block";
+}
+
+
+
+// end login &creatAcount models//
+//srat timer for coupons//
 setInterval(() => {
     const upperDate = new Date('Jan 30, 2022 00:00:00').getTime();
 
