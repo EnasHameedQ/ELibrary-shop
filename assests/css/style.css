@@ -688,6 +688,11 @@ label {
 
 
 /* end  login and creatacount models*/
+.slideshow-container{ 
+     text-align: center;
+    margin-bottom: 60px;
+}
+  
 
 .mySlides img {
     width: 98vw;
