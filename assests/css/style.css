@@ -1086,7 +1086,7 @@ select.filter_kind,
     width: 200px;
     height: 75px;
     pointer-events: none;
-    -webkit-appearance: none;
+
     background-color: azure;
 }
 
